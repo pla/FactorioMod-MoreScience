@@ -156,7 +156,7 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       base_area = 0.1, -- will hold 10 units
       volume = 10,
       base_level = -1,
-      pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {0, -1} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.north --[[@as int]], position = {0, -1} }}
     },
     { -- east
       production_type = "input",
@@ -165,7 +165,7 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       base_area = 0.1, -- will hold 10 units
       base_level = -1,
       volume = 10,
-      pipe_connections = {{ flow_direction="input", direction = defines.direction.east, position = {1, 0} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.east --[[@as int]], position = {1, 0} }}
     },
     { -- west
       production_type = "input",
@@ -174,7 +174,7 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       base_area = 0.1, -- will hold 10 units
       volume = 10,
       base_level = -1,
-      pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-1, 0} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.west --[[@as int]], position = {-1, 0} }}
     },
     { -- south
       production_type = "output",
@@ -183,7 +183,7 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       base_area = 0.1, -- will hold 10 units
       volume = 10,
       base_level = 1,
-      pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1} }}
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.south --[[@as int]], position = {0, 1} }}
     },
     --off_when_no_fluid_recipe = true
   }
