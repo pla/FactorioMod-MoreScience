@@ -57,11 +57,11 @@ LSlib.technology.addPrerequisite   ("weapon-shooting-speed-6"         , "uranium
 LSlib.technology.addPrerequisite   ("worker-robots-speed-4"           , "personal-roboport-mk2-equipment"       )
 LSlib.technology.addPrerequisite   ("personal-roboport-mk2-equipment"   , "logistic-system"                     )
 LSlib.technology.addPrerequisite   ("personal-roboport-mk2-equipment"   , "power-armor-mk2"                     )
-LSlib.technology.removePrerequisite("fusion-reactor-equipment"        , string.format(yellowScienceName, "pack"))
-LSlib.technology.movePrerequisite  ("fusion-reactor-equipment"        , "power-armor", "power-armor-mk2"        )
+LSlib.technology.removePrerequisite("fission-reactor-equipment"        , string.format(yellowScienceName, "pack"))
+LSlib.technology.movePrerequisite  ("fission-reactor-equipment"        , "power-armor", "power-armor-mk2"        )
 
 LSlib.technology.addPrerequisite   ("character-logistic-slots-4"      , "personal-roboport-mk2-equipment"       )
 LSlib.technology.addPrerequisite   ("character-logistic-trash-slots-3", "personal-roboport-mk2-equipment"       )
 
-LSlib.technology.addPrerequisite   ("rocket-control-unit"             , "rocketry"                              )
+-- LSlib.technology.addPrerequisite   ("rocket-control-unit"             , "rocketry"                              )
 LSlib.technology.movePrerequisite  ("atomic-bomb"                     , "rocketry", "explosive-rocketry"        )

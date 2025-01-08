@@ -76,7 +76,7 @@ settings.rocketParts = {
   power    = "rocketpart-fusion-reactor",
   defence  = "rocketpart-shield-array"  ,
   attack   = "rocketpart-laser-array"   ,
-  payload  = "rocketpart-payload-%s[%s]",
+  payload  = "rocketpart-payload-%s-%s",
 }
 settings.rocketParts.container = string.format(settings.rocketParts.payload, "%s", "container")
 

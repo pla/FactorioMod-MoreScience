@@ -62,7 +62,7 @@ for techName,techLevels in pairs{
 
   -- Oil related stuff
   ["fluid-handling-%i"                      ] = {2, 3},
-  ["oil-processing"                         ] = {},
+  -- ["oil-processing"                         ] = {},
   ["advanced-oil-processing"                ] = {},
   ["plastics"                               ] = {},
   ["low-density-structure"                  ] = {},
@@ -99,7 +99,7 @@ for techName,techLevels in pairs{
   ["effect-transmission"                    ] = {},
   ["speed-module%s"                         ] = {"", "-2", "-3"},
   ["productivity-module%s"                  ] = {"", "-2", "-3"},
-  ["effectivity-module%s"                   ] = {"", "-2", "-3"},
+  ["efficiency-module%s"                   ] = {"", "-2", "-3"},
 
   -- military
   ["military-%i"                            ] = {3, 4},
@@ -122,7 +122,7 @@ for techName,techLevels in pairs{
   ["refined-flammables-%i"                  ] = {1, 2, 3, 4, 5, 6, 7},
   ["rocketry"                               ] = {},
   ["explosive-rocketry"                     ] = {},
-  ["rocket-control-unit"                    ] = {},
+  ["processing-unit"                    ] = {},
 
   -- bots
   ["robotics"                               ] = {},
@@ -155,7 +155,7 @@ for techName,techLevels in pairs{
   ["exoskeleton-equipment"                  ] = {},
 
   -- uranium stuff
-  ["uranium-processing"                     ] = {},
+  -- ["uranium-processing"                     ] = {},
   ["nuclear-power"                          ] = {},
   ["nuclear-fuel-reprocessing"              ] = {},
   ["kovarex-enrichment-process"             ] = {},

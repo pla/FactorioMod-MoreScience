@@ -1,10 +1,10 @@
 local scienceNames   = require("prototypes/settings").scienceNames
-local rocketCauldron = require("prototypes/settings").rocketCauldron
+-- local rocketCauldron = require("prototypes/settings").rocketCauldron
 local fluidsPerPack  = require("prototypes/settings").fluidsPerPack
 
 if settings.startup["MS-rocket-launching-extended"].value == true then
 
-  data:extend{
+  local mix = 
     {
       type = "recipe",
       name = string.format(scienceNames.mixing, "pack"),
@@ -18,10 +18,11 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       },
       results =
       {
-        {string.format(scienceNames.mixing, "pack"), 1},
+        {type = "item" , name = string.format(scienceNames.mixing, "pack"), amount = 1},
       },
       enabled = false,
     }
-  }
+
+    data:extend{mix}
 
 end

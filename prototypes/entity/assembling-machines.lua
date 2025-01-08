@@ -71,11 +71,9 @@ rocketAssembling.minable.result = rocketAssembling.name
 
 rocketAssembling.fluid_boxes = nil
 
-rocketAssembling.animation = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].animation)
-rocketAssembling.animation.layers[1]           .filename = "__MoreScience__/graphics/entity/assembling-machine-4/assembling-machine-4.png"
-rocketAssembling.animation.layers[2]           .filename = "__MoreScience__/graphics/entity/assembling-machine-4/assembling-machine-4-shadow.png"
-rocketAssembling.animation.layers[1].hr_version.filename = "__MoreScience__/graphics/entity/assembling-machine-4/hr-assembling-machine-4.png"
-rocketAssembling.animation.layers[2].hr_version.filename = "__MoreScience__/graphics/entity/assembling-machine-4/hr-assembling-machine-4-shadow.png"
+rocketAssembling.graphics_set = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].graphics_set)
+rocketAssembling.graphics_set.animation.layers[1].filename = "__MoreScience__/graphics/entity/assembling-machine-4/hr-assembling-machine-4.png"
+rocketAssembling.graphics_set.animation.layers[2].filename = "__MoreScience__/graphics/entity/assembling-machine-4/hr-assembling-machine-4-shadow.png"
 
 data:extend{rocketAssembling}
 
@@ -156,8 +154,9 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       pipe_picture = createCauldronPipePictures(),
       pipe_covers = pipecoverspictures(),
       base_area = 0.1, -- will hold 10 units
+      volume = 10,
       base_level = -1,
-      pipe_connections = {{ type="input", position = {1, -2} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {0, -1} }}
     },
     { -- east
       production_type = "input",
@@ -165,23 +164,26 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       pipe_covers = pipecoverspictures(),
       base_area = 0.1, -- will hold 10 units
       base_level = -1,
-      pipe_connections = {{ type="input", position = {2, 1} }}
+      volume = 10,
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.east, position = {1, 0} }}
     },
     { -- west
       production_type = "input",
       pipe_picture = createCauldronPipePictures(),
       pipe_covers = pipecoverspictures(),
       base_area = 0.1, -- will hold 10 units
+      volume = 10,
       base_level = -1,
-      pipe_connections = {{ type="input", position = {-2, -1} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.west, position = {-1, 0} }}
     },
     { -- south
       production_type = "output",
       pipe_picture = createCauldronPipePictures(),
       pipe_covers = pipecoverspictures(),
       base_area = 0.1, -- will hold 10 units
+      volume = 10,
       base_level = 1,
-      pipe_connections = {{ type="output", position = {-1, 2} }}
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1} }}
     },
     --off_when_no_fluid_recipe = true
   }

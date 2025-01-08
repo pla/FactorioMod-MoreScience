@@ -30,7 +30,7 @@ for techName,techLevels in pairs{
   ["flight"             ] = {},
   ["roboports"          ] = {},
   ["power-armor"        ] = {},
-  ["rocket-control-unit"] = {},
+  ["processing-unit"] = {},
   ["rocket-silo"        ] = {},
 } do
   if LSlib.utils.table.isEmpty(techLevels) then

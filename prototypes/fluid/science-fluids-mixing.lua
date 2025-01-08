@@ -18,11 +18,11 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
 
     default_temperature = 0,
     max_temperature = 0,
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
     auto_barrel = false,
 
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
+    -- pressure_to_speed_ratio = 0.4,
+    -- flow_to_energy_ratio = 0.59,
     -- fuel_value = "8MJ",
     subgroup = "ms-science-" .. rocketCauldron.subgroup,
     order = "a[" .. rocketCauldron.subgroup .. "]-b-b"
@@ -42,11 +42,11 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
 
       default_temperature = 0,
       max_temperature = 0,
-      heat_capacity = "0.1KJ",
+      heat_capacity = "0.1kJ",
       auto_barrel = false,
 
-      pressure_to_speed_ratio = 0.4,
-      flow_to_energy_ratio = 0.59,
+      -- pressure_to_speed_ratio = 0.4,
+      -- flow_to_energy_ratio = 0.59,
       -- fuel_value = "8MJ",
       subgroup = "ms-science-" .. rocketCauldron.subgroup,
       order = "a[" .. rocketCauldron.subgroup .. "]-b-a" .. fluidNumber .. "[intermediates]"

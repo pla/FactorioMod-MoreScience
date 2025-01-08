@@ -54,7 +54,7 @@ end
 LSlib.technology.removeIngredient  ("braking-force-4"                    , string.format(scienceNames.purple, "pack"))
 LSlib.technology.addPrerequisite   ("braking-force-4"                    , "fluid-wagon"                             )
 LSlib.technology.removeIngredient  ("inserter-capacity-bonus-4"          , string.format(scienceNames.purple, "pack"))
-LSlib.technology.addPrerequisite   ("inserter-capacity-bonus-4"          , "effectivity-module-2"                    )
+LSlib.technology.addPrerequisite   ("inserter-capacity-bonus-4"          , "efficiency-module-2"                    )
 LSlib.technology.addPrerequisite   ("nuclear-power"                      , "electric-energy-distribution-2"          )
 
 LSlib.technology.addPrerequisite   ("stronger-explosives-5"              , "explosive-rocketry"                      )
@@ -87,7 +87,7 @@ concrete.prerequisites = {
 concrete.effects = nil
 concrete.unit = util.table.deepcopy(data.raw["technology"]["advanced-material-processing-2"].unit)
 
-concrete.order = concrete.order .. "-2"
+-- concrete.order = concrete.order .. "-2"
 data:extend{concrete}
 
 -- add recipe unlocks

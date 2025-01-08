@@ -57,11 +57,11 @@ labMK0.energy_usage = "250kW"
 labMK0.energy_source =
 {
   type = "burner",
-  fuel_category = "chemical",
+  fuel_categorys = {"chemical"},
   effectivity = 1,
   fuel_inventory_size = 1,
   --emissions_per_second_per_watt = 3.33333e-05,
-  emissions_per_minute = 9,
+  emissions_per_minute = {["pollution"] = 9},
   smoke =
   {
     {
@@ -71,7 +71,7 @@ labMK0.energy_source =
     }
   }
 }
-labMK0.module_specification.module_slots = 0
+labMK0.module_slots = 0
 
 -- inputs
 for _,scienceName in pairs(sciencePackNames) do
@@ -91,7 +91,7 @@ labMK2.name = "lab-mk2"
 labMK2.localised_name[1] = "item-tier-name.mk2"
 labMK1.next_upgrade = labMK2.name
 labMK2.minable.result = labMK2.name
-labMK2.module_specification.module_slots = 2 * labMK2.module_specification.module_slots
+labMK2.module_slots = 2 * labMK2.module_slots
 labMK2.researching_speed = .5 * labMK2.researching_speed
 labMK2.energy_usage = "500kW"
 

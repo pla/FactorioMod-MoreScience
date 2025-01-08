@@ -2,27 +2,25 @@ data:extend{
   {
     type = "recipe",
     name = "sand",
-    energy_required = 25,
+    energy_required = 5,
     category = "ms-advanced-crafting",
     ingredients =
     {
-      {"stone", 2}
+      {type="item", name="stone", amount=2}
     },
-    result = "sand",
-    result_count = 4,
+    results = {{type="item", name="sand", amount=4}},
     enabled = false,
   },
 
   {
     type = "recipe",
     name = "cork",
-    energy_required = 1,
+    energy_required = 2 ,
     ingredients =
     {
-      {"wood", 1}
+      {type="item", name="wood", amount=1}
     },
-    result = "cork",
-    result_count = 5,
+    results = {{type="item", name="cork", amount=5}},
     enabled = false,
   },
 
@@ -33,10 +31,9 @@ data:extend{
     category = "smelting",
     ingredients =
     {
-      {"sand", 2}
+      {type="item", name="sand", amount=2}
     },
-    result = "glass",
-    result_count = 1,
+    results = {{type="item", name="glass", amount=1}},
     enabled = false,
   },
 
@@ -47,10 +44,12 @@ data:extend{
     category = "ms-advanced-crafting",
     ingredients =
     {
-      {"cork", 1},
-      {"glass", 3},
+      {type="item", name="cork", amount=1},
+      {type="item", name="glass", amount=3},
     },
-    result = "empty-bottle",
+    results = {
+      {type="item", name="empty-bottle", amount = 1},
+    },
     enabled = false,
   },
 
@@ -62,12 +61,10 @@ data:extend{
     icon_size = 32,
     energy_required = 5,
     enabled = false,
-    ingredients =
-    {
+    ingredients = {
       {type="fluid", name="water", amount=20},
     },
-    results =
-    {
+    results = {
       {type="fluid", name="purified-water", amount = 10},
       {type="item", name="sand", amount = 1, probability = .5},
     },

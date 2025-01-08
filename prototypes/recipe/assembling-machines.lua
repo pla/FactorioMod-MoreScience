@@ -6,12 +6,11 @@ data:extend{{
   category = "crafting",
   ingredients =
   {
-    {"assembling-machine-3", 1},
-    {"low-density-structure", 10},
-    {"rocket-control-unit", 1},
+    {type="item", name="assembling-machine-3", amount=1},
+    {type="item", name="low-density-structure", amount=10},
+    {type="item", name="processing-unit", amount=10},
   },
-  result = "rocket-assembling-machine",
-  result_count = 1,
+  results = {{type="item", name="rocket-assembling-machine", amount=1}},
   enabled = false,
 }}
 
@@ -24,12 +23,11 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
     category = "crafting",
     ingredients =
     {
-      {"storage-tank", 1},
-      {"electric-furnace", 1},
-      {"pipe-to-ground", 8},
+      {type="item", name="storage-tank", amount=1},
+      {type="item", name="electric-furnace", amount=1},
+      {type="item", name="pipe-to-ground", amount=8},
     },
-    result = "science-cauldron",
-    result_count = 1,
+    results = {{type="item", name="science-cauldron", amount=1}},
     enabled = false,
   }}
   

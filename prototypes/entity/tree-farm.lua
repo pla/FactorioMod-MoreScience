@@ -15,8 +15,8 @@ seedExtractor.crafting_speed = 1
 seedExtractor.ingredient_count = 2
 seedExtractor.energy_usage = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].energy_usage)
 
-seedExtractor.animation.layers =  {}
-animationLayer = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].animation.layers[1])
+seedExtractor.graphics_set.animation.layers =  {}
+animationLayer = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].graphics_set.animation.layers[1])
 animationLayer.filename = "__MoreScience__/graphics/entity/seed-extractor/seed-extractor.png"
 animationLayer.line_length = 5
 animationLayer.frame_count = 5 * animationLayer.line_length
@@ -24,8 +24,7 @@ animationLayer.width = 800 / animationLayer.line_length
 animationLayer.height = 800 / (animationLayer.frame_count / animationLayer.line_length)
 animationLayer.shift = util.by_pixel(0, 2)
 animationLayer.scale = .95
-animationLayer.hr_version = nil
-table.insert(seedExtractor.animation.layers, util.table.deepcopy(animationLayer))
+table.insert(seedExtractor.graphics_set.animation.layers, util.table.deepcopy(animationLayer))
 
 
 
@@ -46,10 +45,8 @@ woodPlantation.energy_usage = util.table.deepcopy(data.raw["assembling-machine"]
 woodPlantation.selection_box = util.table.deepcopy(data.raw["assembling-machine"]["oil-refinery"].selection_box)
 woodPlantation.collision_box = util.table.deepcopy(data.raw["assembling-machine"]["oil-refinery"].collision_box)
 woodPlantation.fluid_boxes = nil
-woodPlantation.scale_entity_info_icon = true
-
-woodPlantation.animation.layers = {}
-animationLayer = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].animation.layers[1])
+woodPlantation.graphics_set.animation.layers = {}
+animationLayer = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].graphics_set.animation.layers[1])
 animationLayer.filename = "__MoreScience__/graphics/entity/wood-plantation/wood-plantation.png"
 animationLayer.line_length = 6
 animationLayer.frame_count = 6 * animationLayer.line_length
@@ -57,8 +54,7 @@ animationLayer.width = 1344 / animationLayer.line_length
 animationLayer.height = 1344 / (animationLayer.frame_count / animationLayer.line_length)
 animationLayer.shift = util.by_pixel(0, 2)
 animationLayer.scale = 1
-animationLayer.hr_version = nil
-table.insert(woodPlantation.animation.layers, util.table.deepcopy(animationLayer))
+table.insert(woodPlantation.graphics_set.animation.layers, util.table.deepcopy(animationLayer))
 
 
 

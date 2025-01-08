@@ -34,7 +34,7 @@ local function addInfusedSciencePack(scienceName, order)
         time = 60
       },
       upgrade = false,
-      order = data.raw["technology"][string.format(scienceNames.white, "pack")].order .. "-" .. order
+      -- order = data.raw["technology"][string.format(scienceNames.white, "pack")].order .. "-" .. order
     },
   })
 
@@ -75,8 +75,8 @@ for _,techName in pairs{
   "stronger-explosives-7"       ,
   "refined-flammables-7"        ,
   "mining-productivity-4"       ,
-  "follower-robot-count-7"      ,
-  "energy-weapons-damage-7"     ,
+  -- "follower-robot-count-7"      ,
+  -- "energy-weapons-damage-7"     ,
   "worker-robots-speed-6"       ,
   "artillery-shell-range-1"     ,
   "artillery-shell-speed-1"     ,

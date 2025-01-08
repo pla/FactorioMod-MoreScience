@@ -9,10 +9,10 @@ local hullComponent =
   category = rocketParts.category,
   ingredients =
   {
-    {"low-density-structure", 25},
-    {"rocket-control-unit"  , 01},
+    {type="item", name="low-density-structure", amount=25},
+    {type="item", name="processing-unit", amount=10},
   },
-  result = rocketParts.hull,
+  results = {{type="item", name=rocketParts.hull, amount=1}},
 }
 
 local ionThruster =
@@ -24,11 +24,11 @@ local ionThruster =
   category = rocketParts.category,
   ingredients =
   {
-    {"low-density-structure", 10},
-    {"rocket-fuel", 75},
-    {"rocket-control-unit", 60},
+    {type="item", name="low-density-structure", amount=10},
+    {type="item", name="rocket-fuel", amount=75},
+    {type="item", name="processing-unit", amount=80},
   },
-  result = rocketParts.engine1,
+  results = {{type="item", name=rocketParts.engine1, amount=1}},
 }
 
 local ionBooster =
@@ -40,12 +40,12 @@ local ionBooster =
   category = rocketParts.category,
   ingredients =
   {
-    {"low-density-structure", 30},
-    {"rocketpart-ion-thruster", 5},
-    {"rocket-fuel", 150}, -- 1000 - (5+5)*75 - 100
-    {"rocket-control-unit", 40},
+    {type="item", name="low-density-structure", amount=30},
+    {type="item", name="rocketpart-ion-thruster", amount=5},
+    {type="item", name="rocket-fuel", amount=150}, -- 1000 - (5+5)*75 - 100
+    {type="item", name="processing-unit", amount=40},
   },
-  result = rocketParts.engine2,
+  results = {{type="item", name=rocketParts.engine2, amount=1}},
 }
 
 local fusionReactor =
@@ -57,11 +57,11 @@ local fusionReactor =
   category = rocketParts.category,
   ingredients =
   {
-    {"fusion-reactor-equipment", 1},
-    {"rocket-control-unit", 15},
-    {"nuclear-fuel", 50},
+    {type="item", name="fission-reactor-equipment", amount=1},
+    {type="item", name="processing-unit", amount=15},
+    {type="item", name="nuclear-fuel", amount=50},
   },
-  result = rocketParts.power,
+  results = {{type="item", name=rocketParts.power, amount=1}},
 }
 
 local shieldArray =
@@ -73,12 +73,12 @@ local shieldArray =
   category = rocketParts.category,
   ingredients =
   {
-    {"low-density-structure", 20},
-    {"rocket-control-unit", 50},
-    {"energy-shield-mk2-equipment", 5},
-    {"radar", 10},
+    {type="item", name="low-density-structure", amount=20},
+    {type="item", name="processing-unit", amount=50},
+    {type="item", name="energy-shield-mk2-equipment", amount=5},
+    {type="item", name="radar", amount=10},
   },
-  result = rocketParts.defence,
+  results = {{type="item", name=rocketParts.defence, amount=1}},
 }
 
 local laserArray =
@@ -90,12 +90,12 @@ local laserArray =
   category = rocketParts.category,
   ingredients =
   {
-    {"low-density-structure", 20},
-    {"rocket-control-unit", 50},
-    {"discharge-defense-equipment", 5},
-    {"radar", 10},
+    {type="item", name="low-density-structure", amount=20},
+    {type="item", name="processing-unit", amount=50},
+    {type="item", name="discharge-defense-equipment", amount=5},
+    {type="item", name="radar", amount=10},
   },
-  result = rocketParts.attack,
+  results = {{type="item", name=rocketParts.attack, amount=1}},
 }
 
 local payloadContainer =
@@ -106,11 +106,10 @@ local payloadContainer =
   category = rocketParts.category,
   ingredients =
   {
-    {"low-density-structure", 5},
-    {"flying-robot-frame", 1}
+    {type="item", name="low-density-structure", amount=5},
+    {type="item", name="flying-robot-frame", amount=1}
   },
-  result = string.format(rocketParts.container, "mk1"),
-  result_count = 1,
+  results = {{type="item", name=string.format(rocketParts.container, "mk1"), amount=1}},
   enabled = false,
 }
 

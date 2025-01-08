@@ -29,7 +29,7 @@ end
 ----- Tools                                                                -----
 --------------------------------------------------------------------------------
 LSlib.technology.addPrerequisite("steel-axe", "toolbelt")
-LSlib.technology.addIngredient("steel-axe", 1, string.format(scienceNames.green, "pack"))
-LSlib.technology.changeCount("steel-axe", 100)
+-- LSlib.technology.addIngredient("steel-axe", 1, string.format(scienceNames.green, "pack"))
+-- LSlib.technology.changeCount("steel-axe", 100)
 
 LSlib.technology.addPrerequisite("railway", "automobilism")

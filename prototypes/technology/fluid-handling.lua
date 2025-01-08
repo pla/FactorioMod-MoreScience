@@ -21,7 +21,7 @@ for _,recipeName in pairs{
   LSlib.recipe.disable(recipeName)
   LSlib.technology.addRecipeUnlock(techName, recipeName)
 end
-LSlib.technology.moveRecipeUnlock(techName, techName, "empty-barrel") -- this is just for unlock ordening
+LSlib.technology.moveRecipeUnlock(techName, techName, "barrel") -- this is just for unlock ordening
 
 -- add prerequisites on this technology
 --LSlib.technology.addPrerequisite("oil-processing", techName)

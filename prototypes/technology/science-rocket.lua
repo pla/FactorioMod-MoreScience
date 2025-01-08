@@ -56,7 +56,7 @@ LSlib.technology.addRecipeUnlock(rocketTechName, "rocket-assembling-machine")
 --------------------------------------------------------------------------------
 
 -- Update research order
-data.raw["technology"]["rocket-silo"].order = data.raw["technology"][rocketTechName].order .. "-a"
+-- data.raw["technology"]["rocket-silo"].order = data.raw["technology"][rocketTechName].order .. "-a"
 
 -- Create rocket parts research
 local rocketParts = require ("prototypes/settings").rocketParts
@@ -77,7 +77,7 @@ LSlib.technology.addRecipeUnlock(rocketParts.defence, rocketParts.attack)
 --------------------------------------------------------------------------------
 
 -- update research oder
-data.raw["technology"]["rocket-silo"].order = data.raw["technology"][rocketTechName].order .. "-b"
+-- data.raw["technology"]["rocket-silo"].order = data.raw["technology"][rocketTechName].order .. "-b"
 
 --LSlib.technology.addPrerequisite("rocket-silo", "solar-energy")
 --LSlib.technology.addPrerequisite("rocket-silo", "electric-energy-accumulators")

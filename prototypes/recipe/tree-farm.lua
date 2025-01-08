@@ -10,11 +10,11 @@ local handSaw =
   enabled = false,
   ingredients =
   {
-    {"iron-plate", 2},
-    {"iron-stick", 1},
-    {"wood", 1},
+    {type="item", name="iron-plate", amount=2},
+    {type="item", name="iron-stick", amount=1},
+    {type="item", name="wood", amount=1},
   },
-  result = "hand-saw",
+  results = {{type="item", name="hand-saw", amount=1}},
 }
 
 
@@ -26,15 +26,17 @@ local seedExtractor =
 {
   type = "recipe",
   name = "seed-extractor",
-  energy_required = data.raw["assembling-machine"]["chemical-plant"].energy_required,
+  energy_required = 25,
   enabled = false,
   ingredients =
   {
-    {"chemical-plant", 1},
-    {handSaw.name, 1},
-    {"wood", data.raw["item"]["wood"].stack_size / 2},
+    {type="item", name="chemical-plant", amount=1},
+    {type="item", name=handSaw.name,amount= 1},
+    {type="item", name="wood",amount= data.raw["item"]["wood"].stack_size / 2},
   },
-  result = "seed-extractor",
+  results = {
+    {type="item", name="seed-extractor", amount=1}
+  },
 }
 
 
@@ -49,13 +51,15 @@ local woodPlantation  =
   energy_required = seedExtractor.energy_required,
   enabled = false,
   ingredients = {
-    {"assembling-machine-2", 1},
-    {"sand", data.raw["item"]["sand"].stack_size},
-    {"landfill", data.raw["item"]["sand"].stack_size},
-    {"wood", data.raw["item"]["wood"].stack_size},
-    {handSaw.name, data.raw["item"]["hand-saw"].stack_size},
+    {type="item", name="assembling-machine-2", amount=1},
+    {type="item", name="sand",amount= data.raw["item"]["sand"].stack_size},
+    {type="item", name="landfill",amount= data.raw["item"]["sand"].stack_size},
+    {type="item", name="wood",amount= data.raw["item"]["wood"].stack_size},
+    {type="item", name=handSaw.name,amount= data.raw["item"]["hand-saw"].stack_size},
   },
-  result = "wood-plantation",
+  results = {
+    {type="item", name="wood-plantation", amount=1}
+  },
 }
 
 
@@ -72,9 +76,9 @@ local organicTree =
   category = "ms-wood-plantation",
   ingredients =
   {
-    {"tree-seed", 1},
+    {type="item", name="tree-seed", amount=1},
   },
-  result = "organic-tree",
+  results = {{type="item", name="organic-tree", amount=1}},
 }
 
 
@@ -91,10 +95,11 @@ local treeSeed =
   enabled = false,
   category = "ms-seed-extractor",
   ingredients = {
-    {organicTree.result, 1},
+    {type="item", name=organicTree.results[1].name,amount= 1},
   },
-  result = "tree-seed",
-  result_count = 5,
+  results = {
+    {type="item", name="tree-seed", amount=5}
+  },
 }
 
 
@@ -111,15 +116,15 @@ local treeSeedCreator =
   enabled = treeSeed.enabled,
   category = treeSeed.category,
   ingredients = {
-    {"wood", 100},
-    {"sand", 10},
+    {type="item", name="wood", amount=100},
+    {type="item", name="sand", amount=10},
   },
   results =
   {
     {type="item", name="sand", amount = 5},
-    {type="item", name=treeSeed.result, amount = 1, probability = .025},
+    {type="item", name=treeSeed.results[1].name, amount = 1, probability = .025},
   },
-  main_product = treeSeed.result,
+  main_product = treeSeed.results[1].name,
 }
 
 
@@ -136,11 +141,10 @@ local rawWoodProduction =
   enabled = false,
   category = "advanced-crafting",
   ingredients = {
-    {organicTree.result, 1},
-    {handSaw.name, 1},
+    {type="item", name=organicTree.results[1].name, amount= 1},
+    {type="item", name=handSaw.name,  amount=1},
   },
-  result = "wood",
-  result_count = 50
+  results = {{type="item", name="wood", amount=50}},
 }
 
 

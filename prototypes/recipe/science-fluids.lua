@@ -38,9 +38,7 @@ for scienceName,_ in pairs(previousFluid) do
 
   -- STEP 2b: extract the extra ingredients out of the pack --------------------
   ingredients = {}
-  for _,ingredient in pairs(data.raw["recipe"][packName]          .ingredients or
-                            data.raw["recipe"][packName].normal   .ingredients or
-                            data.raw["recipe"][packName].expensive.ingredients) do
+  for _,ingredient in pairs(data.raw["recipe"][packName].ingredients ) do
     local ingredientName = ingredient["name"  ] or ingredient[1]
     if not (ingredientName == "empty-bottle" or ingredientName == "ms-science-fluid") then
       table.insert(ingredients, {
@@ -86,7 +84,7 @@ data:extend{{
   category = "ms-chemical-crafting",
   ingredients =
   {
-    {string.format(scienceNames.white, "pack"), 5}
+    {type = "item", name = string.format(scienceNames.white, "pack"), amount = 5}
   },
   results =
   {

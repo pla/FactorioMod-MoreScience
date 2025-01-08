@@ -51,7 +51,7 @@ end
 LSlib.technology.addPrerequisite ("worker-robots-storage-2"                                            , "logistics-3"         )
 
 -- modules
-LSlib.technology.movePrerequisite("effect-transmission"      , string.format(purpleScienceName, "pack"), "effectivity-module-3")
+LSlib.technology.movePrerequisite("effect-transmission"      , string.format(purpleScienceName, "pack"), "efficiency-module-3")
 LSlib.technology.movePrerequisite("speed-module-3"           , string.format(purpleScienceName, "pack"), "effect-transmission" )
 LSlib.technology.movePrerequisite("productivity-module-3"    , string.format(purpleScienceName, "pack"), "effect-transmission" )
 

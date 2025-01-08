@@ -18,8 +18,8 @@ LSlib.recipe.enable(labMK0.name)
 ----- Lab MK1                                                              -----
 --------------------------------------------------------------------------------
 data.raw["recipe"]["lab"].ingredients = {
-  {"lab-mk0", 1},
-  {"transport-belt", 4}
+  {type="item", name="lab-mk0", amount=1},
+  {type="item", name="transport-belt", amount=4}
 }
 LSlib.recipe.setEngergyRequired("lab", 5 * LSlib.recipe.getEngergyRequired("lab"))
 
@@ -30,15 +30,13 @@ LSlib.recipe.setEngergyRequired("lab", 5 * LSlib.recipe.getEngergyRequired("lab"
 --------------------------------------------------------------------------------
 local labMK2 = util.table.deepcopy(data.raw["recipe"]["lab"])
 labMK2.name = "lab-mk2"
-labMK2.normal = nil
-labMK2.expensive = nil
 labMK2.category = "ms-advanced-crafting"
 labMK2.energy_required = 120
 labMK2.ingredients = {
-  {"lab", 1},
-  {"fusion-reactor-equipment", 1},
+  {type="item", name="lab", amount=1},
+  {type="item", name="fission-reactor-equipment", amount=1},
   {type="fluid", name=string.format(scienceNames.white, "fluid"), amount=250},
 }
-labMK2.result = "lab-mk2"
+labMK2.results = {{type="item", name="lab-mk2", amount=1}}
 labMK2.enabled = false
 data:extend{labMK2}

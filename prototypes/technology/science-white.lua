@@ -15,18 +15,18 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
 end
 
 -- ingredients
-LSlib.technology.removeIngredient(string.format(whiteScienceName, "pack"),    string.format(scienceNames.green , "pack"))
-LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 2, string.format(scienceNames.green , "pack"))
-LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 2, string.format(scienceNames.gray  , "pack"))
-LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 3, string.format(scienceNames.orange, "pack"))
-LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 3, string.format(scienceNames.cyan  , "pack"))
-LSlib.technology.removeIngredient(string.format(whiteScienceName, "pack"),    string.format(scienceNames.blue  , "pack"))
-LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 4, string.format(scienceNames.blue  , "pack"))
-LSlib.technology.removeIngredient(string.format(whiteScienceName, "pack"),    string.format(scienceNames.purple, "pack"))
-LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 4, string.format(scienceNames.purple, "pack"))
-LSlib.technology.removeIngredient(string.format(whiteScienceName, "pack"),    string.format(scienceNames.yellow, "pack"))
-LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 4, string.format(scienceNames.yellow, "pack"))
-LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 5, string.format(scienceNames.pink  , "pack"))
+-- LSlib.technology.removeIngredient(string.format(whiteScienceName, "pack"),    string.format(scienceNames.green , "pack"))
+-- LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 2, string.format(scienceNames.green , "pack"))
+-- LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 2, string.format(scienceNames.gray  , "pack"))
+-- LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 3, string.format(scienceNames.orange, "pack"))
+-- LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 3, string.format(scienceNames.cyan  , "pack"))
+-- LSlib.technology.removeIngredient(string.format(whiteScienceName, "pack"),    string.format(scienceNames.blue  , "pack"))
+-- LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 4, string.format(scienceNames.blue  , "pack"))
+-- LSlib.technology.removeIngredient(string.format(whiteScienceName, "pack"),    string.format(scienceNames.purple, "pack"))
+-- LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 4, string.format(scienceNames.purple, "pack"))
+-- LSlib.technology.removeIngredient(string.format(whiteScienceName, "pack"),    string.format(scienceNames.yellow, "pack"))
+-- LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 4, string.format(scienceNames.yellow, "pack"))
+-- LSlib.technology.addIngredient   (string.format(whiteScienceName, "pack"), 5, string.format(scienceNames.pink  , "pack"))
 
 -- unlock effects
 LSlib.technology.addRecipeUnlock (string.format(whiteScienceName, "pack"), string.format(rocketParts.container, "mk1"))

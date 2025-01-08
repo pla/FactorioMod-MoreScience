@@ -13,7 +13,7 @@ local cratePrototype = data.raw["item"][string.format(rocketParts.container, "mk
 
 cratePrototype.icon      = nil
 cratePrototype.icon_size = nil
-cratePrototype.icons     = LSlib.item.getIcons("item", "infinity-chest", 1, {0,0}, nil) or {}
+cratePrototype.icons     = LSlib.item.getIcons("item", "infinity-chest", 0.5, {0,0}, nil) or {}
 
 cratePrototype.stack_size = 1
 

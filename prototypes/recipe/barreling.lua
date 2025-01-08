@@ -1,9 +1,9 @@
 
 if settings.startup["MS-allow-empty-barrel-recycling"].value == true then
-  local barrelRecycling = util.table.deepcopy(data.raw["recipe"]["empty-barrel"])
+  local barrelRecycling = util.table.deepcopy(data.raw["recipe"]["barrel"])
   barrelRecycling.name = barrelRecycling.name .. "-recycling"
 
-  barrelRecycling.icons = LSlib.item.getIcons("item", "empty-barrel")
+  barrelRecycling.icons = LSlib.item.getIcons("item", "barrel")
   table.insert(barrelRecycling.icons, {
     icon = "__MoreScience__/graphics/icons/recycling.png",
     icon_size = 256,

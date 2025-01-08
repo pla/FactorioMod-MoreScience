@@ -51,8 +51,8 @@ LSlib.recipe.addResult    (cyanPackName, cyanPackName          , 01, "item")
 
 local pinkPackName = string.format(scienceNames.pink, "pack")
 LSlib.recipe.create       (pinkPackName)
-LSlib.recipe.addIngredient(pinkPackName, "rocket-control-unit", 01 ,"item")
-LSlib.recipe.addIngredient(pinkPackName, "effectivity-module" , 02 ,"item")
+LSlib.recipe.addIngredient(pinkPackName, "processing-unit"    , 10 ,"item")
+LSlib.recipe.addIngredient(pinkPackName, "efficiency-module" , 02 ,"item")
 LSlib.recipe.addIngredient(pinkPackName, "nuclear-fuel"       , 01 ,"item")
 LSlib.recipe.addResult    (pinkPackName, pinkPackName         , 01, "item")
 
@@ -120,11 +120,11 @@ for scienceColor,scienceName in pairs(scienceNames) do
       category = "ms-chemical-crafting",
       ingredients =
       {
-        {string.format(scienceName, "pack"), 2},
+        {type = "item", name = string.format(scienceName, "pack")        , amount =  2},
         {type = "fluid", name = string.format(scienceNames.white, "fluid"), amount = fluidsPerPack},
         {type = "fluid", name = "purified-water"                          , amount = fluidsPerPack},
       },
-      result = "infused-"..string.format(scienceName, "pack"),
+      results = {{type="item", name="infused-"..string.format(scienceName, "pack"), amount=1}},
     }}
 
     LSlib.recipe.allowModuleEffect({

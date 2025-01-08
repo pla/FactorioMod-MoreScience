@@ -13,9 +13,9 @@ data:extend({
     icon = scienceTech.icon .. "potion-pink.png",
     icon_size = scienceTech.icon_size,
     prerequisites = {
-      "effectivity-module",
+      "efficiency-module",
       "kovarex-enrichment-process",
-      "rocket-control-unit",
+      -- "processing-unit",
     },
     effects =
     {

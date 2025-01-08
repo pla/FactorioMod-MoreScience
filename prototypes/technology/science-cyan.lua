@@ -78,13 +78,13 @@ for techName,techLevels in pairs{
   ["effect-transmission"                    ] = {},
   ["speed-module%s"                         ] = {"-3"},
   ["productivity-module%s"                  ] = {"-3"},
-  ["effectivity-module%s"                   ] = {"-3"},
+  ["efficiency-module%s"                   ] = {"-3"},
 
   -- power
   ["battery"                                ] = {},
   ["electric-energy-accumulators"           ] = {},
   ["electric-energy-distribution-%i"        ] = {2},
-  ["rocket-control-unit"                    ] = {},
+  ["processing-unit"                         ] = {},
 
   ["laser"                                  ] = {},
   ["laser-turrets"                          ] = {},
@@ -94,7 +94,7 @@ for techName,techLevels in pairs{
   -- armor
   ["modular-armor"                          ] = {},
   ["power-armor%s"                          ] = {"", "-mk2"},
-  ["effectivity-module-%i"                  ] = {2},
+  ["efficiency-module-%i"                  ] = {2},
 
   -- equipment
   ["solar-panel-equipment"                  ] = {},
@@ -123,7 +123,7 @@ for techName,techLevels in pairs{
   ["follower-robot-count-%i"                ] = {1, 2, 3, 4, 5, 6, 7},
 
   -- uranium stuff
-  ["uranium-processing"                     ] = {},
+  -- ["uranium-processing"                     ] = {},
   ["nuclear-power"                          ] = {},
   ["nuclear-fuel-reprocessing"              ] = {},
   ["kovarex-enrichment-process"             ] = {},
@@ -144,7 +144,7 @@ LSlib.technology.removeIngredient  ("research-speed-3"           , string.format
 LSlib.technology.removeIngredient  ("braking-force-3"            , string.format(scienceNames.blue  , "pack") )
 LSlib.technology.removeIngredient  ("braking-force-3"            , string.format(scienceNames.purple, "pack") )
 
-LSlib.technology.addPrerequisite   ("effectivity-module-2"       , "electric-energy-distribution-2"           )
+LSlib.technology.addPrerequisite   ("efficiency-module-2"       , "electric-energy-distribution-2"           )
 
 LSlib.technology.addPrerequisite   ("night-vision-equipment"     , "laser"                                    )
 LSlib.technology.movePrerequisite  ("battery-equipment"          , "battery", "electric-energy-accumulators"  )

@@ -7,11 +7,11 @@ data.raw["recipe"]["rocket-part"].energy_required = data.raw["recipe"]["rocket-p
 data.raw["recipe"]["rocket-part"].hidden = nil
 data.raw["recipe"]["rocket-part"].ingredients =
 {
-  {rocketParts.hull   , 30},
-  {rocketParts.engine1, 05},
-  {rocketParts.engine2, 01},
-  {rocketParts.power  , 02},
-  {rocketParts.defence, 03},
-  {rocketParts.attack , 03},
+  {type = "item",name = rocketParts.hull   ,amount = 30},
+  {type = "item",name = rocketParts.engine1,amount = 05},
+  {type = "item",name = rocketParts.engine2,amount = 01},
+  {type = "item",name = rocketParts.power  ,amount = 02},
+  {type = "item",name = rocketParts.defence,amount = 03},
+  {type = "item",name = rocketParts.attack ,amount = 03},
 }
 data.raw["rocket-silo"]["rocket-silo"].rocket_parts_required = 1
