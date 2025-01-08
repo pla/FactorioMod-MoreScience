@@ -8,7 +8,7 @@ local earlySciencePack = util.table.deepcopy(data.raw["recipe"][string.format(sc
 earlySciencePack.name = earlySciencePack.name .. "-basic"
 earlySciencePack.energy_required = 1
 earlySciencePack.category = "ms-manual-crafting"
-earlySciencePack.enabled = true
+earlySciencePack.enabled = false
 
 earlySciencePack.allow_as_intermediate = false
 earlySciencePack.always_show_made_in = true
@@ -16,7 +16,8 @@ earlySciencePack.always_show_made_in = true
 earlySciencePack.subgroup = "ms-science-bottling"
 earlySciencePack.order = "e[science-pack-1]"
 data:extend{earlySciencePack}
-
+LSlib.technology.addRecipeUnlock("automation-science-pack",earlySciencePack.name)
+LSlib.technology.removeRecipeUnlock("automation-science-pack","automation-science-pack")
 
 
 --------------------------------------------------------------------------------

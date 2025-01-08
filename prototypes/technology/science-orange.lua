@@ -136,7 +136,6 @@ for techName,techLevels in pairs{
   ["character-logistic-trash-slots-%i"      ] = {1, 2, 3, 4, 5},
   ["auto-character-logistic-trash-slots"    ] = {},
   ["combat-robotics%s"                      ] = {"", "-2", "-3"},
-  ["combat-robotics%s"                      ] = {"", "-2", "-3"},
   ["follower-robot-count-%i"                ] = {1, 2, 3, 4, 5, 6, 7},
 
   -- armor
