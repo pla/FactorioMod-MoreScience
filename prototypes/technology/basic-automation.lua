@@ -24,7 +24,6 @@ data:extend({
 for _, recipeName in pairs{
   "inserter",
   "transport-belt",
-  "electric-mining-drill",
   "lab",
 } do
   LSlib.recipe.disable(recipeName)
