@@ -24,6 +24,7 @@ animationLayer.width = 800 / animationLayer.line_length
 animationLayer.height = 800 / (animationLayer.frame_count / animationLayer.line_length)
 animationLayer.shift = util.by_pixel(0, 2)
 animationLayer.scale = .95
+animationLayer.animation_speed = 0.25
 table.insert(seedExtractor.graphics_set.animation.layers, util.table.deepcopy(animationLayer))
 
 
