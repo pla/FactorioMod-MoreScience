@@ -2,8 +2,12 @@ local scienceNames = require("prototypes/settings").scienceNames
 
 local woodPlantation = util.table.deepcopy(data.raw["technology"]["automation-2"])
 woodPlantation.name = "wood-plantation"
-woodPlantation.icon = "__MoreScience__/graphics/technology/wood-plantation-tech.png"
-woodPlantation.icon_size = 128
+woodPlantation.icons = {
+  {
+    icon = "__MoreScience__/graphics/technology/wood-plantation-tech.png",
+    icon_size = 128
+  }
+}
 woodPlantation.prerequisites =
 {
   "landfill",
