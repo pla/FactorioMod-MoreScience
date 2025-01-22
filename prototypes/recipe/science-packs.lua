@@ -98,11 +98,7 @@ for sciencePackName,craftingTime in pairs{
   --[string.format(scienceNames.white , "pack")] = 50,
 } do
   if data.raw.recipe[sciencePackName] then
-    LSlib.recipe.removeModuleEffect({
-      "productivity-module"  ,
-      "productivity-module-2",
-      "productivity-module-3",
-    }, sciencePackName)
+    data.raw.recipe[sciencePackName].allow_productivity = true
   end
 end
 
@@ -119,6 +115,7 @@ for scienceColor,scienceName in pairs(scienceNames) do
       energy_required = 2 * (regularPack and regularPack.energy_required or 50),
       enabled = false,
       category = "ms-chemical-crafting",
+      allow_productivity = true,
       ingredients =
       {
         {type = "item", name = string.format(scienceName, "pack")        , amount =  2},
@@ -128,10 +125,5 @@ for scienceColor,scienceName in pairs(scienceNames) do
       results = {{type="item", name="infused-"..string.format(scienceName, "pack"), amount=1}},
     }}
 
-    LSlib.recipe.allowModuleEffect({
-      "productivity-module"  ,
-      "productivity-module-2",
-      "productivity-module-3",
-    }, "infused-"..string.format(scienceName, "pack"))
   end
 end

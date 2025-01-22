@@ -65,11 +65,7 @@ for scienceName,_ in pairs(previousFluid) do
   LSlib.recipe.editIngredient(packName, "ms-science-fluid", fluidName, fluidsPerPack)
 
   -- STEP 4: allow productivity on the science fluid ---------------------------
-  LSlib.recipe.allowModuleEffect({
-    "productivity-module"  ,
-    "productivity-module-2",
-    "productivity-module-3",
-  }, fluidName)
+  data.raw.recipe[fluidName].allow_productivity = true
 end
 
 -- regular red science pack require double the amount of purified water since it has no previous fluid
