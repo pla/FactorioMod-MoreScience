@@ -2,7 +2,7 @@ data:extend{
   {
     type = "recipe",
     name = "sand",
-    energy_required = 5,
+    energy_required = 25,
     category = "ms-advanced-crafting",
     ingredients =
     {
