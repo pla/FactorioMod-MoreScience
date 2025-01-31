@@ -116,7 +116,7 @@ function Debug:reseachAllTechnologies()
 
   researchTechnology("advanced-automation-science-pack")
 
-  researchTechnology("oil-processing")
+  researchTechnology("oil-gathering")
   researchTechnology("fluid-handling-2")
   researchTechnology("lubricant")
 
@@ -132,7 +132,7 @@ function Debug:reseachAllTechnologies()
 
   researchTechnology("plastics")
   researchTechnology("advanced-electronics")
-  researchTechnology("stack-inserter")
+  researchTechnology("bulk-inserter")
   researchTechnology("inserter-capacity-bonus-2")
 
   researchTechnology("modules")

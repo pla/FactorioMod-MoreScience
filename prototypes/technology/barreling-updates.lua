@@ -9,12 +9,13 @@ local scienceNames = require("prototypes/settings").scienceNames
 
 for fluidName,newTechName in pairs{
   ["purified-water"] = "purification-research", -- purified water needs to move to purification research
-  ["crude-oil"     ] = "oil-processing"       , -- crude oil needs to move to oil processing
+  ["crude-oil"     ] = "oil-gathering"       , -- crude oil needs to move to oil processing
   ["sulfuric-acid" ] = "sulfur-processing"    , -- sulfuric acid needs to move to sulfer processing
   ["lubricant"     ] = "lubricant"
 } do
   for _,barrelingRecipe in pairs{
-    "fill-%s-barrel",
+    -- "fill-%s-barrel",
+    "%s-barrel",
     "empty-%s-barrel",
   } do
     LSlib.technology.moveRecipeUnlock(techName, newTechName, string.format(barrelingRecipe, fluidName))

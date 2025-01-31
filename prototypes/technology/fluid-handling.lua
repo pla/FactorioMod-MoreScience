@@ -24,7 +24,7 @@ end
 LSlib.technology.moveRecipeUnlock(techName, techName, "barrel") -- this is just for unlock ordening
 
 -- add prerequisites on this technology
---LSlib.technology.addPrerequisite("oil-processing", techName)
+LSlib.technology.addPrerequisite("oil-gathering", techName)
 
 
 
@@ -44,7 +44,7 @@ data:extend{fluidHandling2}
 LSlib.technology.addPrerequisite(fluidHandling2.name, techName)
 LSlib.technology.addPrerequisite(fluidHandling2.name, "engine")
 LSlib.technology.addPrerequisite(fluidHandling2.name, "automation-2")
-LSlib.technology.addPrerequisite(fluidHandling2.name, "oil-processing")
+LSlib.technology.addPrerequisite(fluidHandling2.name, "oil-gathering")
 
 -- other technologies that depend on this one
 for _,tech in pairs{
@@ -64,9 +64,9 @@ sulfur.effects = nil
 sulfur.prerequisites = {}
 sulfur.unit = util.table.deepcopy(fluidHandling2.unit)
 data:extend{sulfur}
-LSlib.technology.addPrerequisite(sulfur.name, "oil-processing")
+LSlib.technology.addPrerequisite(sulfur.name, "oil-gathering")
 LSlib.technology.moveRecipeUnlock(sulfur.name.."-processing", sulfur.name, "sulfur")
-LSlib.technology.movePrerequisite(sulfur.name.."-processing", "oil-processing", sulfur.name)
+LSlib.technology.movePrerequisite(sulfur.name.."-processing", "oil-gathering", sulfur.name)
 LSlib.technology.movePrerequisite("explosives", sulfur.name.."-processing", sulfur.name)
 
 --------------------------------------------------------------------------------

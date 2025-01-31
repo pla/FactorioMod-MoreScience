@@ -56,7 +56,7 @@ data:extend{
     order = "c-a"
   },
 }
-LSlib.technology.removeRecipeUnlock("oil-processing", "chemical-plant")
+LSlib.technology.removeRecipeUnlock("oil-gathering", "chemical-plant")
 
 --------------------------------------------------------------------------------
 ----- bottling research                                                    -----
@@ -152,7 +152,7 @@ end
 -- other technologies that depend on this one
 for _,techName in pairs{
   "stone-wall",
-  "oil-processing",
+  "oil-gathering",
   "advanced-material-processing",
 } do
   LSlib.technology.addPrerequisite(techName, brick.name)

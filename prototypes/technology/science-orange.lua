@@ -48,7 +48,7 @@ data:extend({
 
 -- other technologies that depend on this one
 for _,techName in pairs{
-  "oil-processing",
+  "oil-gathering",
   "automated-rail-transportation",
   --"automobilism",
 } do
@@ -62,7 +62,7 @@ for techName,techLevels in pairs{
 
   -- Oil related stuff
   ["fluid-handling-%i"                      ] = {2, 3},
-  -- ["oil-processing"                         ] = {},
+  ["oil-gathering"                          ] = {},
   ["advanced-oil-processing"                ] = {},
   ["plastics"                               ] = {},
   ["low-density-structure"                  ] = {},
@@ -74,12 +74,12 @@ for techName,techLevels in pairs{
   ["explosives"                             ] = {},
   ["flammables"                             ] = {},
   ["rocket-fuel"                            ] = {},
-  ["advanced-electronics%s"                 ] = {"", "-2"},
+  ["advanced-circuit"                       ] = {},
   ["coal-liquefaction"                      ] = {},
 
   ["logistics-%i"                           ] = {3},
   ["automation-%i"                          ] = {3},
-  ["stack-inserter"                         ] = {},
+  ["bulk-inserter"                          ] = {},
   ["inserter-capacity-bonus-%i"             ] = {2, 3, 4, 5, 6, 7},
   --["mining-productivity-%i"                 ] = {1, 4, 8, 12, 16},
 
@@ -122,7 +122,7 @@ for techName,techLevels in pairs{
   ["refined-flammables-%i"                  ] = {1, 2, 3, 4, 5, 6, 7},
   ["rocketry"                               ] = {},
   ["explosive-rocketry"                     ] = {},
-  ["processing-unit"                    ] = {},
+  ["processing-unit"                        ] = {},
 
   -- bots
   ["robotics"                               ] = {},
@@ -195,9 +195,9 @@ for _,recipeName in pairs{
   "solid-fuel-from-light-oil"    ,
   "solid-fuel-from-heavy-oil"    ,
 } do
-  LSlib.technology.moveRecipeUnlock("oil-processing", "flammables", recipeName)
+  LSlib.technology.moveRecipeUnlock("oil-gathering", "flammables", recipeName)
 end
 
-LSlib.technology.movePrerequisite("inserter-capacity-bonus-1", "stack-inserter", "fast-inserter")
+LSlib.technology.movePrerequisite("inserter-capacity-bonus-1", "bulk-inserter", "fast-inserter")
 LSlib.technology.addPrerequisite ("inserter-capacity-bonus-1", "logistics-2")
-LSlib.technology.addPrerequisite ("inserter-capacity-bonus-2", "stack-inserter")
+LSlib.technology.addPrerequisite ("inserter-capacity-bonus-2", "bulk-inserter")
