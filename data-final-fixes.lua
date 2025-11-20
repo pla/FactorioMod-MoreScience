@@ -16,3 +16,12 @@ if not containsExtension then
   LSlib.utils.log.log("----- Cleaning up the tech tree -----")
   LSlib.technology.removeAllRedundantPrerequisites()
 end
+
+-- compat with bzgas
+if mods["bzgas2"] then
+  LSlib.recipe.editIngredient("lab-mk0", "electronic-circuit", "copper-cable")
+  LSlib.recipe.addIngredient("lab", "electronic-circuit", 10, "item")
+  LSlib.technology.moveRecipeUnlock("basic-automation", "electronics", "lab")
+  LSlib.technology.moveRecipeUnlock("electronics", "basic-automation", "lab-mk0")
+end
+
