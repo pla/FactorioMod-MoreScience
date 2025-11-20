@@ -25,3 +25,9 @@ if mods["bzgas2"] then
   LSlib.technology.moveRecipeUnlock("electronics", "basic-automation", "lab-mk0")
 end
 
+-- compat with bzaluminum2
+if mods["bzaluminum2"] then
+  LSlib.technology.moveRecipeUnlock("steam-power", "electronics", "lab")
+end
+
+
