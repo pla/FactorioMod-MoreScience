@@ -7,22 +7,27 @@ data:extend({
     icon = "__base__/graphics/technology/automation-1.png",
     icon_size = 256,
     prerequisites = nil,
-    unit =
-    {
-      count = 5,
-      ingredients =
-      {
-        {string.format(scienceNames.red, "pack"), 1}
-      },
-      time = 5
+    research_trigger = {
+      type = "craft-item",
+      item = "iron-gear-wheel",
+      count = 10,
     },
+    -- unit =
+    -- {
+    --   count = 5,
+    --   ingredients =
+    --   {
+    --     {string.format(scienceNames.red, "pack"), 1}
+    --   },
+    --   time = 5
+    -- },
     order = "a-b-a",
   },
 })
 
 -- recipes that gets unlocked with this technology
 for _, recipeName in pairs{
-  "inserter",
+  -- "inserter",
   "transport-belt",
   "lab",
 } do
