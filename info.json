@@ -9,6 +9,8 @@
   "description": "Changes the science pack recipes, take it to the next level. Just so it isn't always the same boring vanilla recipes...",
   "dependencies": [
     "base >= 1.1.5",
-    "LSlib"
+    "LSlib",
+    "? bzgas2",
+    "? bzaluminum2"
   ]
 }
