@@ -27,6 +27,8 @@ end
 
 -- compat with bzaluminum2
 if mods["bzaluminum2"] then
+  LSlib.recipe.editIngredient("lab-mk0", "copper-cable", "aluminum-cable")
+  LSlib.recipe.editIngredient("lab", "aluminum-cable", "electronic-circuit" )
   LSlib.technology.moveRecipeUnlock("steam-power", "electronics", "lab")
 end
 
