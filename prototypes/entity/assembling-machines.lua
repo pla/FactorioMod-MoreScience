@@ -154,28 +154,28 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       pipe_picture = createCauldronPipePictures(),
       pipe_covers = pipecoverspictures(),
       volume = 10,
-      pipe_connections = {{ flow_direction="input", direction = defines.direction.north --[[@as int]], position = {0, -1} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.north }}
     },
     { -- east
       production_type = "input",
       pipe_picture = createCauldronPipePictures(),
       pipe_covers = pipecoverspictures(),
       volume = 10,
-      pipe_connections = {{ flow_direction="input", direction = defines.direction.east --[[@as int]], position = {1, 0} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.east }}
     },
     { -- west
       production_type = "input",
       pipe_picture = createCauldronPipePictures(),
       pipe_covers = pipecoverspictures(),
       volume = 10,
-      pipe_connections = {{ flow_direction="input", direction = defines.direction.west --[[@as int]], position = {-1, 0} }}
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.west }}
     },
     { -- south
       production_type = "output",
       pipe_picture = createCauldronPipePictures(),
       pipe_covers = pipecoverspictures(),
       volume = 10,
-      pipe_connections = {{ flow_direction="output", direction = defines.direction.south --[[@as int]], position = {0, 1} }}
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.south }}
     },
     --off_when_no_fluid_recipe = true
   }
