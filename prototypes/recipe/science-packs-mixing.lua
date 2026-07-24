@@ -9,7 +9,7 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       type = "recipe",
       name = string.format(scienceNames.mixing, "pack"),
       energy_required = 3,
-      category = "ms-chemical-crafting",
+      categories = {"ms-chemical-crafting"},
       ingredients =
       {
         {type = "item" , name = "empty-bottle", amount = 1},

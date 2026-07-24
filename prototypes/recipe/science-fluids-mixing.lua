@@ -8,7 +8,7 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       type = "recipe",
       name = string.format(scienceNames.mixing, "fluid-intermediate1"),
       energy_required = 3,
-      category = rocketCauldron.category,
+      categories = {rocketCauldron.category},
       ingredients =
       {
         {type = "fluid", name = string.format(scienceNames.red   , "fluid"), amount = 1},
@@ -25,7 +25,7 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       type = "recipe",
       name = string.format(scienceNames.mixing, "fluid-intermediate2"),
       energy_required = 3,
-      category = rocketCauldron.category,
+      categories = {rocketCauldron.category},
       ingredients =
       {
         {type = "fluid", name = string.format(scienceNames.green , "fluid"), amount = 1},
@@ -42,7 +42,7 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       type = "recipe",
       name = string.format(scienceNames.mixing, "fluid-intermediate3"),
       energy_required = 3,
-      category = rocketCauldron.category,
+      categories = {rocketCauldron.category},
       ingredients =
       {
         {type = "fluid", name = string.format(scienceNames.gray  , "fluid"), amount = 1},
@@ -59,7 +59,7 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
       type = "recipe",
       name = string.format(scienceNames.mixing, "fluid"),
       energy_required = 1,
-      category = rocketCauldron.category,
+      categories = {rocketCauldron.category},
       always_show_made_in = true,
       ingredients =
       {

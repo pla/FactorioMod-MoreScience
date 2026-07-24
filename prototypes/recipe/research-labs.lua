@@ -33,7 +33,7 @@ LSlib.technology.removeRecipeUnlock("electronics",data.raw["recipe"]["lab"].name
 --------------------------------------------------------------------------------
 local labMK2 = util.table.deepcopy(data.raw["recipe"]["lab"])
 labMK2.name = "lab-mk2"
-labMK2.category = "ms-advanced-crafting"
+labMK2.categories = {"ms-advanced-crafting"}
 labMK2.energy_required = 120
 labMK2.ingredients = {
   {type="item", name="lab", amount=1},

@@ -8,7 +8,7 @@ local ssp = {
   type = "recipe",
   name = string.format(scienceNames.white, "pack"),
   energy_required = 300,
-  category = "ms-advanced-crafting",
+  categories = {"ms-advanced-crafting"},
   ingredients =
   {
     {type="item", name=string.format(rocketParts.payload, "mk1", string.format(scienceNames.white, "pack")), amount= 1}
@@ -26,7 +26,7 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
     type = "recipe",
     name = string.format(rocketParts.payload, "mk1", string.format(scienceNames.mixing, "pack")),
     energy_required = 300,
-    category = "ms-advanced-crafting",
+    categories = {"ms-advanced-crafting"},
     ingredients =  util.table.deepcopy(data.raw["item"]["satellite"].rocket_launch_products),
     results = {{type="item", name=string.format(rocketParts.payload, "mk1", string.format(scienceNames.mixing, "pack")), amount=1}},
     enabled = false,
@@ -42,7 +42,7 @@ else
     type = "recipe",
     name = string.format(rocketParts.payload, "mk1", "empty-bottle"),
     energy_required = 300,
-    category = "ms-advanced-crafting",
+    categories = {"ms-advanced-crafting"},
     ingredients = util.table.deepcopy(data.raw["item"]["satellite"].rocket_launch_products),
     results = {{type="item", name=string.format(rocketParts.payload, "mk1", "empty-bottle"), amount=1}},
     enabled = false,

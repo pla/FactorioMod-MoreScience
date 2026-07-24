@@ -73,7 +73,7 @@ local organicTree =
   name = "organic-tree",
   energy_required = 60 * 5,
   enabled = false,
-  category = "ms-wood-plantation",
+  categories = {"ms-wood-plantation"},
   ingredients =
   {
     {type="item", name="tree-seed", amount=1},
@@ -93,7 +93,7 @@ local treeSeed =
   localised_name = util.table.deepcopy(data.raw["item"]["tree-seed"].localised_name),
   energy_required = 60,
   enabled = false,
-  category = "ms-seed-extractor",
+  categories = {"ms-seed-extractor"},
   ingredients = {
     {type="item", name=organicTree.results[1].name,amount= 1},
   },
@@ -114,7 +114,7 @@ local treeSeedCreator =
   subgroup = data.raw["item"][treeSeed.name].subgroup,
   energy_required = treeSeed.energy_required / 2,
   enabled = treeSeed.enabled,
-  category = treeSeed.category,
+  categories = treeSeed.categories,
   ingredients = {
     {type="item", name="wood", amount=100},
     {type="item", name="sand", amount=10},
@@ -122,7 +122,7 @@ local treeSeedCreator =
   results =
   {
     {type="item", name="sand", amount = 5},
-    {type="item", name=treeSeed.results[1].name, amount = 1, probability = .025},
+    {type="item", name=treeSeed.results[1].name, amount = 1, independent_probability = .025},
   },
   main_product = treeSeed.results[1].name,
 }
@@ -139,7 +139,7 @@ local rawWoodProduction =
   localised_name = {"item-name.wood"},
   energy_required = organicTree.energy_required / 2,
   enabled = false,
-  category = "advanced-crafting",
+  categories = {"advanced-crafting"},
   ingredients = {
     {type="item", name=organicTree.results[1].name, amount= 1},
     {type="item", name=handSaw.name,  amount=1},

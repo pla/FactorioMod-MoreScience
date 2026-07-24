@@ -3,7 +3,7 @@ data:extend{
     type = "recipe",
     name = "sand",
     energy_required = 25,
-    category = "ms-advanced-crafting",
+    categories = {"ms-advanced-crafting"},
     ingredients =
     {
       {type="item", name="stone", amount=2}
@@ -28,7 +28,7 @@ data:extend{
     type = "recipe",
     name = "glass",
     energy_required = 3.5,
-    category = "smelting",
+    categories = {"smelting"},
     ingredients =
     {
       {type="item", name="sand", amount=2}
@@ -41,7 +41,7 @@ data:extend{
     type = "recipe",
     name = "empty-bottle",
     energy_required = 5,
-    category = "ms-advanced-crafting",
+    categories = {"ms-advanced-crafting"},
     ingredients =
     {
       {type="item", name="cork", amount=1},
@@ -56,7 +56,7 @@ data:extend{
   {
     type = "recipe",
     name = "purified-water",
-    category = "ms-chemical-crafting",
+    categories = {"ms-chemical-crafting"},
     icon = "__MoreScience__/graphics/icons/fluid/fluid-00.png",
     icon_size = 32,
     energy_required = 5,
@@ -66,7 +66,7 @@ data:extend{
     },
     results = {
       {type="fluid", name="purified-water", amount = 10},
-      {type="item", name="sand", amount = 1, probability = .5},
+      {type="item", name="sand", amount = 1, independent_probability = .5},
     },
     main_product = "purified-water",
     crafting_machine_tint =

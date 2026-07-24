@@ -77,7 +77,7 @@ data:extend{{
   name = string.format(scienceNames.white, "fluid"),
   energy_required = 30,
   enabled = false,
-  category = "ms-chemical-crafting",
+  categories = {"ms-chemical-crafting"},
   ingredients =
   {
     {type = "item", name = string.format(scienceNames.white, "pack"), amount = 5}

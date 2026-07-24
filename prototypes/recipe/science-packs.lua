@@ -7,7 +7,7 @@ local fluidsPerPack = require("prototypes/settings").fluidsPerPack
 local earlySciencePack = util.table.deepcopy(data.raw["recipe"][string.format(scienceNames.red, "pack")])
 earlySciencePack.name = earlySciencePack.name .. "-basic"
 earlySciencePack.energy_required = 1
-earlySciencePack.category = "ms-manual-crafting"
+earlySciencePack.categories = {"ms-manual-crafting"}
 earlySciencePack.enabled = false
 
 earlySciencePack.allow_as_intermediate = false
@@ -114,7 +114,7 @@ for scienceColor,scienceName in pairs(scienceNames) do
       name = "infused-"..string.format(scienceName, "pack"),
       energy_required = 2 * (regularPack and regularPack.energy_required or 50),
       enabled = false,
-      category = "ms-chemical-crafting",
+      categories = {"ms-chemical-crafting"},
       allow_productivity = true,
       ingredients =
       {

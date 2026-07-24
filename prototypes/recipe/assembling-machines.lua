@@ -3,7 +3,7 @@ data:extend{{
   type = "recipe",
   name = "rocket-assembling-machine",
   energy_required = 25,
-  category = "crafting",
+  categories = { "crafting" },
   ingredients =
   {
     {type="item", name="assembling-machine-3", amount=1},
@@ -20,7 +20,7 @@ if settings.startup["MS-rocket-launching-extended"].value == true then
     type = "recipe",
     name = "science-cauldron",
     --energy_required = 25,
-    category = "crafting",
+    categories = {"crafting"},
     ingredients =
     {
       {type="item", name="storage-tank", amount=1},
